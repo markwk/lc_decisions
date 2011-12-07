@@ -26,7 +26,9 @@ function lc_decisions_user_default_permissions() {
   $permissions['create decisions'] = array(
     'name' => 'create decisions',
     'roles' => array(
-      '0' => 'authenticated user',
+      '0' => 'administrator',
+      '1' => 'manager',
+      '2' => 'teacher',
     ),
   );
 
@@ -35,6 +37,8 @@ function lc_decisions_user_default_permissions() {
     'name' => 'delete decisions',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'manager',
+      '2' => 'teacher',
     ),
   );
 
@@ -51,7 +55,11 @@ function lc_decisions_user_default_permissions() {
   // Exported permission: remove voters
   $permissions['remove voters'] = array(
     'name' => 'remove voters',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'manager',
+      '2' => 'teacher',
+    ),
   );
 
   // Exported permission: view decisions
